@@ -69,8 +69,8 @@ body {
     font-family: "new-order";
     padding-top: 50px;
     padding-bottom: 50px;
-    padding-left: 20rem;
-    padding-right: 20rem;
+    padding-left: 15rem;
+    padding-right: 15rem;
 }
 
 main {
@@ -312,7 +312,7 @@ img {
     color: whitesmoke;
     border: none;
     border-radius: 10px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
     padding-left: 10px;
@@ -323,25 +323,28 @@ img {
 }
 
 .linkedin-btn img {
-    margin-left: 5px;
+    margin-left: 10px;
+    padding-left: 5px;
     /* Espace entre le texte et l'icône */
-    height: 50px;
+    height: 40px;
     /* Taille uniforme pour les icônes */
-    width: 50px;
+    width: 40px;
     /* Forcer la largeur pour que les icônes soient carrées */
     object-fit: contain;
+        margin: auto;
 }
 
 .github-btn img {
     margin-left: 10px;
     /* Espace entre le texte et l'icône */
-    height: 45px;
+    height: 35px;
     /* Taille uniforme pour les icônes */
-    width: 45px;
+    width: 35px;
     /* Forcer la largeur pour que les icônes soient carrées */
     object-fit: contain;
     padding-left: 10px;
-    padding-right: 5px;
+    padding-right: 10px;
+    margin: auto;
 }
 
 .linkedin-btn:hover,
