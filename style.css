@@ -1,0 +1,348 @@
+/* --------------------- */
+/*        RESPONSIVITY   */
+/* --------------------- */
+
+/* --------------------- */
+/*        GLOBAL         */
+/* --------------------- */
+body {
+    background-color: #2d2e42;
+    margin: 0 auto;
+    /* scroll-behavior: smooth; */
+    position: relative;
+    min-height: 100vh;
+    /* assure que le body prend tout l'écran */
+}
+
+
+/* --------------------- */
+/*        NAVBAR         */
+/* --------------------- */
+.navbar {
+    font-family: 'new-order';
+
+    .nav-items {
+        display: flex;
+        gap: 2rem;
+        font-family: 'new-order';
+        font-size: 2rem;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 2rem;
+        scroll-behavior: smooth;
+    }
+
+    span {
+        color: rgb(70, 182, 169);
+    }
+
+    background-color: rgb(40, 42, 58);
+    padding: 30px 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* --------------------- */
+/*       TITRE           */
+/* --------------------- */
+.title {
+    font-family: "new-order";
+
+    h1 {
+        color: whitesmoke;
+        font-size: 7rem;
+        margin: 0;
+    }
+
+    h2 {
+        color: rgb(70, 182, 169);
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    margin: 0;
+    font-family: "new-order";
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 20rem;
+    padding-right: 20rem;
+}
+
+main {
+    margin: 0;
+    font-family: "new-order";
+    padding-left: 20rem;
+    padding-right: 20rem;
+}
+
+/* Titres */
+h2,
+h3 {
+    color: #e9345e;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 600;
+
+}
+
+/* --------------------- */
+/*        ABOUT          */
+/* --------------------- */
+#about {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 0px;
+    font-family: "new-order";
+}
+
+#about h2 {
+    margin: 0px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+#about p {
+    color: rgb(200, 193, 214);
+    margin: 0;
+    padding-bottom: 25px;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+/* --------------------- */
+/*        SKILLS         */
+/* --------------------- */
+#skills {
+    font-family: "new-order";
+    padding-bottom: 50px;
+    justify-content: center;
+
+    h3 {
+        color: rgb(66, 218, 200);
+        font-size: 2rem;
+        margin: 0;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        /* text-align: center; */
+    }
+
+    h2 {
+        font-family: "new-order";
+        border-bottom: 5px solid #e9345e;
+        width: 50px;
+        /* Choisis la couleur que tu veux */
+        margin: 0;
+        padding-top: 50px;
+        margin-bottom: 25px;
+    }
+}
+
+.Skill-categoryone {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-bottom: 25px;
+    /* justify-content: center; */
+}
+
+.Skill-categorytwo {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-bottom: 25px;
+    /* justify-content: center; */
+}
+
+.Skill-categorythree {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-bottom: 25px;
+    /* justify-content: center; */
+}
+
+.Skills-card {
+    background-color: #626372;
+    width: 170px;
+    height: 170px;
+    justify-items: center;
+
+    svg path {
+        fill: rgb(70, 182, 169);
+    }
+
+    svg {
+        width: 80px;
+        padding-top: 35px;
+    }
+
+    /* optionnel : ombré léger */
+}
+
+.Skills-card h3 {
+    margin: 0;
+    padding-bottom: 20px;
+    font-size: 2rem;
+}
+
+.Skills-card p {
+    color: white;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    margin: 0;
+    padding-top: 5px;
+    /* padding-bottom: 10px; */
+}
+
+
+/* --------------------- */
+/*       PROJECTS        */
+/* --------------------- */
+#projects {
+    h2 {
+        /* font-family: 'new-order'; */
+        margin: 0;
+        padding-bottom: 50px;
+    }
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-family: "new-order";
+}
+
+#projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    padding-bottom: 100px;
+
+    h3 {
+        color: #e9345e;
+        margin: 0;
+        padding-bottom: 20px;
+        font-size: 2rem;
+    }
+}
+
+.projects-box {
+    background-color: #37364a;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    padding: 2rem;
+    min-height: 350px;
+    /* tu peux augmenter ou baisser cette valeur */
+    /* box-shadow: 0 4px 10px rgba(51, 50, 64, 0.302); */
+    /* optionnel : ombré léger */
+
+    /* --------------------- */
+    /*        CONTACT        */
+}
+
+.projects-box p {
+    color: rgb(200, 193, 214);
+    line-height: 1.5;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* --------------------- */
+#contact {
+    font-family: "new-order";
+
+    /* padding-top: 50px;
+        padding-bottom: 50px; */
+    /* text-align: center; */
+    h2 {
+        color: rgb(70, 182, 169);
+        margin: 0;
+        padding-bottom: 25px;
+        /* padding-top: 25px; */
+    }
+
+    p {
+        color: whitesmoke;
+    }
+}
+
+#contact p {
+    color: whitesmoke;
+    font-size: 1.6rem;
+    line-height: 1;
+    margin: 0;
+    padding-bottom: 25px;
+}
+
+.contact a {
+    color: rgb(70, 182, 169);
+}
+
+/* --------------------- */
+/*       BUTTONS         */
+/* --------------------- */
+.linkedin-btn,
+.github-btn {
+    /* background-color: rgb(40, 42, 58); */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #e9345e;
+    font-family: 'new-order';
+    font-weight: 600;
+    color: whitesmoke;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    /* padding-top: 5px; */
+    margin-bottom: 25px;
+}
+
+.linkedin-btn img {
+    margin-left: 5px;
+    /* Espace entre le texte et l'icône */
+    height: 50px;
+    /* Taille uniforme pour les icônes */
+    width: 50px;
+    /* Forcer la largeur pour que les icônes soient carrées */
+    object-fit: contain;
+}
+
+.github-btn img {
+    margin-left: 10px;
+    /* Espace entre le texte et l'icône */
+    height: 45px;
+    /* Taille uniforme pour les icônes */
+    width: 45px;
+    /* Forcer la largeur pour que les icônes soient carrées */
+    object-fit: contain;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+.linkedin-btn:hover,
+.github-btn:hover {
+    /* background-color: rgb(40, 42, 58); */
+    /* background-color: #37364a; */
+    /* background-color: #3332404d; */
+    background-color: #37364a;
+}
+
+/* --------------------- */
+/*       FOOTER          */
+/* --------------------- */
+footer {
+    background-color: rgb(40, 42, 58);
+    padding-left: 20rem;
+    padding-right: 20rem;
+    padding-top: 50px;
+    padding-bottom: 25px;
+}
