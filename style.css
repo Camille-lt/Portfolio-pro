@@ -31,7 +31,7 @@ body {
     a {
         color: white;
         text-decoration: none;
-        font-size: 2rem;
+        font-size: 1.7rem;
         scroll-behavior: smooth;
     }
 
@@ -76,15 +76,15 @@ body {
 main {
     margin: 0;
     font-family: "new-order";
-    padding-left: 20rem;
-    padding-right: 20rem;
+    padding-left: 15rem;
+    padding-right: 15rem;
 }
 
 /* Titres */
 h2,
 h3 {
     color: #e9345e;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-style: normal;
     font-weight: 600;
 
@@ -110,7 +110,7 @@ h3 {
     color: rgb(200, 193, 214);
     margin: 0;
     padding-bottom: 25px;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     line-height: 1.5;
 }
 
@@ -133,12 +133,13 @@ h3 {
 
     h2 {
         font-family: "new-order";
+        font-size: 3rem;
         border-bottom: 5px solid #e9345e;
         width: 50px;
         /* Choisis la couleur que tu veux */
-        margin: 0;
-        padding-top: 50px;
-        margin-bottom: 25px;
+            margin: 0px;
+     padding-bottom: 25px;
+        padding-top: 25px;
     }
 }
 
@@ -168,8 +169,8 @@ h3 {
 
 .Skills-card {
     background-color: #626372;
-    width: 170px;
-    height: 170px;
+    width: 130px;
+    height: 130px;
     justify-items: center;
 
     svg path {
@@ -177,8 +178,8 @@ h3 {
     }
 
     svg {
-        width: 80px;
-        padding-top: 35px;
+        width: 70px;
+        padding-top: 20px
     }
 
     /* optionnel : ombré léger */
@@ -193,32 +194,41 @@ h3 {
 .Skills-card p {
     color: white;
     line-height: 1.5;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 0;
     padding-top: 5px;
     /* padding-bottom: 10px; */
 }
 
-
 /* --------------------- */
 /*       PROJECTS        */
 /* --------------------- */
+@media (max-width: 600px) {
+  #projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .projects-box {
+    width: 90%;
+    min-height: auto;
+  }
+}
 #projects {
-    h2 {
-        /* font-family: 'new-order'; */
-        margin: 0;
-        padding-bottom: 50px;
-    }
-
     padding-top: 50px;
     padding-bottom: 50px;
     font-family: "new-order";
+
+    h2 {
+        margin: 0;
+        padding-bottom: 50px;
+    }
 }
 
 #projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;            /* permet le passage à la ligne */
+    justify-content: center;    /* centre les cartes dans la page */
+    gap: 2rem;
     padding-bottom: 100px;
 
     h3 {
@@ -235,20 +245,26 @@ h3 {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
     padding: 2rem;
     min-height: 350px;
-    /* tu peux augmenter ou baisser cette valeur */
-    /* box-shadow: 0 4px 10px rgba(51, 50, 64, 0.302); */
-    /* optionnel : ombré léger */
-
-    /* --------------------- */
-    /*        CONTACT        */
+    width: 300px;                /* même largeur pour toutes */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
 .projects-box p {
     color: rgb(200, 193, 214);
-    line-height: 1.5;
-    font-size: 1.2rem;
+    line-height: 1.2;
+    font-size: 1rem;
     margin-bottom: 10px;
 }
+
+img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
 
 /* --------------------- */
 #contact {
