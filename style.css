@@ -174,11 +174,12 @@ h3 {
     align-items: center;
     text-align: center;
 }
-/* .Skills-card svg { */
+.Skills-card svg {
     width: 70px;
     padding-top: 20px;
     transition: transform 0.3s ease, filter 0.3s ease;
     cursor: pointer;
+}
 
 .Skills-card svg:hover {
     transform: scale(1.15) rotate(10deg);
@@ -186,6 +187,11 @@ h3 {
 }
 .Skills-card svg path {
     fill: rgb(70, 182, 169);
+}
+.Skills-card h3 {
+    margin: 0;
+    padding-bottom: 20px;
+    font-size: 2rem;
 }
 .Skills-card p {
     color: white;
