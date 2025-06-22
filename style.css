@@ -162,7 +162,13 @@ h3 {
         transform: translateY(0);
     }
 } */
-
+.skills-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
 .Skills-card {
     background-color: #67677928;
     border-radius: 11%;
