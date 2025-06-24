@@ -231,7 +231,12 @@ h3 {
   object-fit: cover;
   border-radius: 8px;
 }
+.projet-image img[src="./a set/projet_Adaction.png"] {
+  /* tes styles ici */
+  height: 100px;
+  width: 50pxx;
 
+}
 .project-content h3 {
   margin-bottom: 1rem;
   font-size: 1.4rem;
