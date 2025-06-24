@@ -14,7 +14,7 @@ body {
     background: radial-gradient(circle at 5% 5%, rgba(70, 182, 169, 0.236) 0%, transparent 20%),
                 radial-gradient(circle at 90% 90%, rgba(70, 182, 169, 0.236) 0%, transparent 20%); 
 
-    background-color: #2d2e42;
+    background-color: #2f3047;
       position: relative;
   z-index: 0;
 }
@@ -148,7 +148,7 @@ h3 {
 }
 
 .Skill-category {
-  background-color: #50526216;
+  background-color: #50526238;
   width: 300px;
   display: grid;
   grid-template-columns: 1fr 1fr;
