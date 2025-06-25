@@ -132,10 +132,10 @@ h3 {
 }
 #skills h3 {
     color: rgb(66, 218, 200);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: 0;
     padding-bottom: 20px;
-    padding-top: 50px;
+    padding-top: 35px;
 }
 #skills h2 {
     font-family: "new-order";
@@ -148,14 +148,14 @@ h3 {
 }
 
 .Skill-category {
-  background-color: #50526238;
-  width: 300px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: auto;
-  gap: 20px;
-  padding: 20px;
-  justify-items: center;
+    background-color: #50526238;
+    /* width: 200px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    gap: 15px;
+    padding: 20px;
+    justify-items: center;
 }
 
 /* @keyframes fadeInUp {
@@ -165,23 +165,24 @@ h3 {
     }
 } */
 .skills-wrapper {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
+  gap: 25px; /* espace entre les cartes */
   margin-top: 1rem;
 }
 .Skills-card {
-    background-color: #67677928;
-    border-radius: 11%;
-    width: 130px;
-    height: 130px;
-    justify-items: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  width: 100%;         /* occupe toute la colonne */
+  max-width: 100px;    /* limite max pour ne pas que ce soit trop large */
+  height: 100px;
+  background-color: #67677928;
+  border-radius: 11%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
+
 .Skills-card svg {
     width: 70px;
     padding-top: 20px;
@@ -208,6 +209,34 @@ h3 {
     margin: 0;
     padding-top: 5px;
 }
+
+/* TECHNOS PROJETS */
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.tech-tag {
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  background-color: rgba(220, 212, 212, 0.608);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* couleurs spécifiques par techno */
+.html { background-color: #e14468; /* rouge/rose accent */ color: white; }
+.css { background-color: #61627ad1; /* bleu foncé fond */ color: rgb(66, 218, 200); }
+.js { background-color: #fcd00cde; /* jaune moutarde doux */ color: #2e304a; }
+.react { background-color: rgb(66, 218, 200); /* bleu/vert vif */ color: #2d2e42; }
+.next { background-color: #4d5278ca; /* plus foncé que fond */ color: rgb(66, 218, 200); }
+.node { background-color: #59ab90; /* vert foncé, dans les tons bleu/vert */ color: white; }
+.express { background-color: #a83f58; /* rouge/rose plus doux que accent */ color: white; }
+.sql { background-color: #4b8196ee; /* bleu foncé mais différent du fond */ color: white; }
 
 /* --------------------- */
 /*       PROJECTS        */
