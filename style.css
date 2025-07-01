@@ -150,7 +150,7 @@ h3 {
 .Skill-category {
     background-color: #50526238;
     width: 220px;
-    height: 220px;
+    height: 230px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: auto;
