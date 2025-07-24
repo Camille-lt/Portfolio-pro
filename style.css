@@ -11,12 +11,11 @@ body {
     position: relative;
     min-height: 100vh;
     font-family: "new-order";
-    background: radial-gradient(circle at 5% 5%, rgba(70, 182, 169, 0.236) 0%, transparent 20%),
-                radial-gradient(circle at 90% 90%, rgba(70, 182, 169, 0.236) 0%, transparent 20%); 
-
+    background: 
+        radial-gradient(circle at 5% 5%, rgba(70, 182, 169, 0.236) 0%, transparent 20%),
+        radial-gradient(circle at 90% 90%, rgba(70, 182, 169, 0.236) 0%, transparent 20%);
     background-color: #2f3047;
-      position: relative;
-  z-index: 0;
+    z-index: 0;
 }
 
 /* --------------------- */
@@ -25,7 +24,6 @@ body {
 .navbar {
     font-family: 'new-order';
     background-color: #2d2e42;
-    /* background-color: rgb(40, 42, 58); */
     padding: 30px 60px;
     display: flex;
     justify-content: flex-end;
@@ -60,7 +58,7 @@ body {
     font-family: "new-order";
     padding-top: 50px;
     padding-bottom: 50px;
-    padding-left: 15rem;
+    padding-left: 10rem;
     padding-right: 15rem;
     margin: 0;
 }
@@ -89,7 +87,6 @@ main {
 h2,
 h3 {
     color: #e24267;
-    /* color: #ea3f67; */
     font-size: 2.5rem;
     font-style: normal;
     font-weight: 600;
@@ -98,33 +95,34 @@ h3 {
 /* --------------------- */
 /*        ABOUT          */
 /* --------------------- */
-#about {
-    padding-bottom: 50px;
-    width: 800px;
-    margin: 0px;
-    font-family: "new-order";
-}
 
 #about h2 {
-    margin: 0px;
+    margin: 0;
     font-size: 2.5rem;
     padding-bottom: 25px;
     padding-top: 25px;
 }
+#about {
+    padding-bottom: 50px;
+    max-width: 800px;     /* max largeur, jamais plus que 800px */
+    width: 90%;           /* largeur relative, 90% de la largeur parent */
+    /* margin: 0 auto;       centrer horizontalement */
+    font-family: "new-order";
+}
 
 #about p {
-    color:white;
+    color: white;
     margin: 0;
-    padding-bottom: 25px;
+    padding: 0 1rem 25px 0; /* padding à droite pour respirer, aucun à gauche */
     font-size: 1.2rem;
     line-height: 1.5;
 }
+
 
 /* --------------------- */
 /*        SKILLS         */
 /* --------------------- */
 #skills {
-    /* background-color: rgba(57, 61, 81, 0.704); */
     font-family: "new-order";
     padding-bottom: 50px;
     padding-left: 1rem;
@@ -142,7 +140,7 @@ h3 {
     font-size: 2.5rem;
     border-bottom: 5px solid #e9345e;
     width: 50px;
-    margin: 0px;
+    margin: 0;
     padding-bottom: 25px;
     padding-top: 25px;
 }
@@ -159,21 +157,14 @@ h3 {
     justify-items: center;
 }
 
-/* @keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-} */
 .skills-wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
-  gap: 25px; /* espace entre les cartes */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
   margin-top: 1rem;
 }
 .Skills-card {
-  width: 100%;         /* occupe toute la colonne */
-  /* max-width: 100px;    limite max pour ne pas que ce soit trop large */
+  width: 100%;
   height: 100px;
   background-color: #67677928;
   border-radius: 11%;
@@ -182,7 +173,7 @@ h3 {
   align-items: center;
   text-align: center;
   justify-content: center;
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .Skills-card svg {
@@ -231,14 +222,14 @@ h3 {
 }
 
 /* couleurs spécifiques par techno */
-.html { background-color: #e14468; /* rouge/rose accent */ color: white; }
-.css { background-color: #61627ad1; /* bleu foncé fond */ color: rgb(66, 218, 200); }
-.js { background-color: #fcd00cde; /* jaune moutarde doux */ color: #2e304a; }
-.react { background-color: rgb(66, 218, 200); /* bleu/vert vif */ color: #2d2e42; }
-.next { background-color: #4d5278ca; /* plus foncé que fond */ color: rgb(66, 218, 200); }
-.node { background-color: #59ab90; /* vert foncé, dans les tons bleu/vert */ color: white; }
-.express { background-color: #a83f58; /* rouge/rose plus doux que accent */ color: white; }
-.sql { background-color: #4b8196ee; /* bleu foncé mais différent du fond */ color: white; }
+.html { background-color: #e14468; color: white; }
+.css { background-color: #61627ad1; color: rgb(66, 218, 200); }
+.js { background-color: #fcd00cde; color: #2e304a; }
+.react { background-color: rgb(66, 218, 200); color: #2d2e42; }
+.next { background-color: #4d5278ca; color: rgb(66, 218, 200); }
+.node { background-color: #59ab90; color: white; }
+.express { background-color: #a83f58; color: white; }
+.sql { background-color: #4b8196ee; color: white; }
 
 /* --------------------- */
 /*       PROJECTS        */
@@ -253,7 +244,7 @@ h3 {
     padding: 2rem;
     margin-bottom: 2rem;
 }
-.project-wrapper{
+.project-wrapper {
     padding-bottom: 50px;
 }
 .project-image img {
@@ -263,10 +254,8 @@ h3 {
   border-radius: 8px;
 }
 .projet-image img[src="./a set/projet_Adaction.png"] {
-  /* tes styles ici */
   height: 100px;
-  width: 50pxx;
-
+  width: 50px;
 }
 .project-content h3 {
   margin-bottom: 1rem;
@@ -274,10 +263,11 @@ h3 {
 }
 
 .project-content p {
-color: white;
+  color: white;
   margin-bottom: 0.7rem;
   line-height: 1.5;
 }
+
 /* --------------------- */
 /*       BUTTONS         */
 /* --------------------- */
@@ -288,7 +278,6 @@ color: white;
     align-items: center;
     background-color: #e9345e;
     font-family: 'new-order';
-    /* font-weight: 600; */
     color: whitesmoke;
     border: none;
     border-radius: 10px;
@@ -297,7 +286,6 @@ color: white;
     transition: background-color 0.3s ease;
     padding-left: 7px;
     padding-top: 3px;
-    /* padding-bottom: 3px; */
     margin-bottom: 15px;
 }
 .linkedin-btn img {
@@ -350,8 +338,8 @@ color: white;
 }
 footer {
     background-color: #2d2e42;
-    padding-left: 15rem;
-    padding-right: 15rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
     padding-top: 25px;
     padding-bottom: 25px;
 }
@@ -364,12 +352,10 @@ a {
     text-decoration: none;
 }
 
-
 /* --------------------- */
 /*       MEDIA QUERIES   */
 /* --------------------- */
 @media (max-width: 1024px) {
-
     .title,
     main,
     footer {
@@ -413,13 +399,15 @@ a {
         margin-top: 10px;
     }
 
-    /* Skills catégories en colonne */
-    .Skill-categoryone,
-    .Skill-categorytwo,
-    .Skill-categorythree {
+    /* Skills catégories en colonne (ajoute les classes si nécessaire) */
+    .Skill-category {
+        width: 100%;
+        height: auto;
+        display: flex;
         flex-direction: column;
         gap: 10px;
         align-items: center;
+        padding: 10px 0;
     }
 
     /* Skills cards plus petites */
@@ -439,12 +427,8 @@ a {
     }
 
     /* Projects container vertical */
-    #projects-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .projects-box {
+        grid-template-columns: 1fr;
         width: 90%;
         min-height: auto;
     }
