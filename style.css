@@ -388,7 +388,7 @@ a {
     #about, #skills, #projects, #contact, .navbar, .title {
         /* Ajuste le padding horizontal pour toutes les sections principales */
         padding-left: 1rem !important; 
-        padding-right: 1rem !important;
+        padding-right: 2rem !important;
     }
 
     /* ⚡ COMPENSE LE CONTENU CACHÉ PAR LA BARRE INFÉRIEURE (60px de haut) */
@@ -452,7 +452,7 @@ a {
     /* ⚡ TITRES et TEXTE (Ajusté aux dernières valeurs fournies) */
     .title h1 { font-size: 3rem; }
     .title h2 { font-size: 1.2rem; } /* Réajusté à 1.2rem, 1rem était trop petit */
-    #about p { font-size: 1rem; } /* Réajusté à 1rem */
+    #about p { font-size: 0.8rem; } /* Réajusté à 1rem */
     #about h2 { font-size: 2rem;}
     
     /* ------------------------------------- */
@@ -465,14 +465,18 @@ a {
     .cards-container {
         gap: 10px;
     }
+.skills-wrapper {
 
-   .skills-wrapper {
-        /* 1 colonne de catégorie sur mobile */
-grid-template-columns: 1fr !important;
-        gap: 15px;
-    }
+grid-template-columns: 1fr;
+padding-left: 10px;
 
-    
+gap: 15px;
+
+/* Force le centrage de la grille dans sa section (qui a 1rem de padding) */
+
+justify-items: center;
+
+}
     .Skills-card svg {
         width: 35px; 
     }
@@ -487,7 +491,9 @@ grid-template-columns: 1fr !important;
     /* ⚡ PROJECTS et FOOTER (styles validés) */
     /* ------------------------------------- */
     #projects h2 { font-size: 2rem;}
-
+#projects{
+    padding: auto;
+}
     .projects-box {
         grid-template-columns: 1fr;
         gap: 1.5rem;
