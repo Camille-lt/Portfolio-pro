@@ -371,68 +371,111 @@ a {
         padding-right: 5rem;
     }
 }
+/* ===================== */
+/* MEDIA QUERIES         */
+/* ===================== */
 
 /* --------------------- */
-/* Mobile Grand / Petit   */
+/* Mobile (<= 600px)     */
 /* --------------------- */
 @media (max-width: 600px) {
-    body {
-        background-color: #2f3047;
-
-        /* ⚡ Background radial vert + bleu nuit adapté mobile */
-        background-image: 
-            radial-gradient(circle at 20% 20%, rgba(70, 182, 169, 0.2) 0%, transparent 60%),
-            radial-gradient(circle at 80% 80%, rgba(70, 182, 169, 0.15) 0%, transparent 60%);
-        background-repeat: no-repeat;
-        background-position: top left, bottom right;
-        background-size: 80% 80%, 80% 80%; /* agrandi pour que le fondu reste doux */
-    }
-    /* ⚡ Ajust paddings pour petits écrans */
+    
+    /* ⚡ Ajustement des paddings généraux pour les très petits écrans */
     .title, main, footer {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
-
-    /* ⚡ Titres plus petits */
-    .title h1 { font-size: 3.5rem; text-align: left; }
-    .title h2 { font-size: 1.2rem; text-align: left; }
+    .navbar {
+        padding: 15px 1rem;
+        flex-direction: column; /* Laisse le logo en haut, la nav en dessous */
+        align-items: flex-start;
+    }
 
     /* ⚡ Navbar */
-    .navbar {
-        padding: 20px 30px;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
     .navbar .nav-items {
-        font-size: 1.5rem;
-        gap: 1rem;
+        font-size: 1rem;
+        gap: 0.8rem;
         flex-wrap: wrap;
-        justify-content: flex-end;
+        justify-content: center;
         width: 100%;
         margin-top: 10px;
     }
+    .navbar a {
+        font-size: 1rem;
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+    
+    /* ⚡ Titres */
+    .title h1 { font-size: 3rem; }
+    .title h2 { font-size: 1.2rem; }
+    h2 { font-size: 2rem; }
+    #about p { font-size: 1rem; }
 
-    /* ⚡ Skills */
+    /* ⚡ Skills (Grid parfait - basé sur la dernière structure HTML avec .cards-container) */
+    .skills-wrapper {
+        grid-template-columns: 1fr; /* Une seule colonne de catégorie sur mobile */
+        gap: 15px;
+    }
     .Skill-category {
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
+        /* Revert to 100% width on mobile */
+        max-width: none; 
+        padding: 10px;
+    }
+  /* ⚡ Ajustement de la grille pour les catégories de compétences */
+    .cards-container {
+        display: grid;
+        /* ⚡ GEMINI: Utilisation d'auto-fit pour s'assurer que même 2 cartes remplissent bien l'espace */
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); 
         gap: 10px;
-        align-items: center;
-        padding: 10px 0;
+        /* ⚡ GEMINI: Centrage des cartes si elles ne remplissent pas exactement la grille */
+        justify-content: center; 
     }
     .Skills-card {
-        width: 100px;
-        height: 100px;
+        /* On ne force plus width: 100% car le minmax gère la taille */
+        width: 100%; 
+        max-width: 160px; /* Limite pour ne pas être trop grande */
     }
-    .Skills-card h3 { font-size: 1.5rem; padding-bottom: 10px; }
-    .Skills-card svg { width: 50px; padding-top: 10px; }
+    .Skills-card svg {
+        width: 35px; /* Réduction de l'icône */
+    }
+    .Skills-card p {
+        font-size: 0.8rem; /* Réduction du texte */
+    }
 
-    /* ⚡ Projects vertical */
+    /* ⚡ Projects (Vertical et Suppression de l'Inversion) */
     .projects-box {
         grid-template-columns: 1fr;
-        width: 90%;
-        min-height: auto;
+        gap: 1.5rem;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        /* Suppression de l'inversion des projets sur mobile (image toujours en haut) */
+        grid-template-areas: unset; 
+    }
+    .projects-box.project-even {
+        background: radial-gradient(circle at 90% 90%, rgba(70, 182, 169, 0.134) 0%, transparent 45%); /* Harmonise le background */
+    }
+    .projects-box.project-even .project-content,
+    .projects-box.project-even .project-image {
+        grid-area: unset; /* Annule le grid-area */
+    }
+    .project-content h3 { font-size: 1.5rem; }
+    .project-content p { font-size: 0.9rem; }
+    .tech-tag { font-size: 0.8rem; }
+    
+    /* ⚡ Contact (Boutons Centrés) */
+    footer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .button-wrapper {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    .linkedin-btn, .github-btn {
+        width: 50%;
+        max-width: 300px;
     }
 }
