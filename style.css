@@ -361,7 +361,7 @@ a {
 @media (max-width: 1024px) {
         body {
         /* background-size: 60% 60%, 60% 60%; /* agrandit les cercles verts */
-        /* background-position: top 5% left 5%, bottom 5% right 5%; décale légèrement pour éviter bord */ */
+        /* background-position: top 5% left 5%, bottom 5% right 5%; décale légèrement pour éviter bord */ 
     }
     .title,
     main,
@@ -371,110 +371,148 @@ a {
     }
 }
 /* ===================== */
-/* MEDIA QUERIES         */
-/* ===================== */
-
-/* --------------------- */
+ /* --------------------- */
 /* Mobile (<= 600px)     */
 /* --------------------- */
 @media (max-width: 600px) {
     
-    /* ⚡ Ajustement des paddings généraux pour les très petits écrans */
+    /* ⚡ STEP 1: RETRAIT DU PADDING DES CONTENEURS PARENTS (pour éviter les conflits de largeur) */
     .title, main, footer {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-    .navbar {
-        padding: 15px 1rem;
-        flex-direction: column; /* Laisse le logo en haut, la nav en dessous */
-        align-items: flex-start;
-    }
-
-    /* ⚡ Navbar */
-    .navbar .nav-items {
-        font-size: 1rem;
-        gap: 0.8rem;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100%;
-        margin-top: 10px;
-    }
-    .navbar a {
-        font-size: 1rem;
-    }
-    .logo {
-        margin-bottom: 10px;
+        /* Ces conteneurs sont mis en pleine largeur (0 padding) */
+        padding-left: 0; 
+        padding-right: 0;
     }
     
-    /* ⚡ Titres */
-    .title h1 { font-size: 3rem; }
-    .title h2 { font-size: 1.2rem; }
-    h2 { font-size: 2rem; }
-    #about p { font-size: 1rem; }
+    /* ⚡ STEP 2: APPLICATION DU PADDING SUR LES SECTIONS ENFANTS (pour l'espace de 1rem) */
+    /* Les styles suivants assurent que le contenu interne est aligné et n'est pas collé aux bords */
+    #about, #skills, #projects, #contact, .navbar, .title {
+        /* Ajuste le padding horizontal pour toutes les sections principales */
+        padding-left: 1rem !important; 
+        padding-right: 1rem !important;
+    }
 
-    /* ⚡ Skills (Grid parfait - basé sur la dernière structure HTML avec .cards-container) */
-    .skills-wrapper {
-        grid-template-columns: 1fr; /* Une seule colonne de catégorie sur mobile */
+    /* ⚡ COMPENSE LE CONTENU CACHÉ PAR LA BARRE INFÉRIEURE (60px de haut) */
+    main, footer {
+        padding-bottom: 80px; 
+    }
+    
+    /* ⚡ Le titre remonte car la nav n'est plus en haut */
+    .title {
+        /* On conserve le padding-top de 30px */
+        padding-top: 30px; 
+        /* Réduire le padding-bottom du titre pour laisser plus d'espace */
+        padding-bottom: 30px; 
+    }
+    
+    /* ------------------------------------- */
+    /* ⚡ NAVIGATION INFÉRIEURE (Bottom Nav) */
+    /* ------------------------------------- */
+    
+.navbar {
+    top: auto; 
+    bottom: 0; 
+    position: fixed; 
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    /* ⚡ CORRECTION CLÉ: Supprimer tout padding horizontal ici */
+    padding: 0; 
+    height: 60px; 
+    
+    /* On utilise space-between pour pousser les nav-items aux extrémités */
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.navbar .nav-items {
+    /* ⚡ CLÉ DU SUCCÈS: Ajouter le padding interne ici, pour qu'il ne soit pas coupé */
+    padding-left: 1rem;
+    padding-right: 3rem;
+    
+    width: 100%;
+    /* Utiliser space-between pour étaler les liens aux extrémités du padding interne */
+    justify-content: space-between; 
+    gap: 0.2rem; 
+    margin-top: 0;
+}
+    
+    .logo {
+        display: none !important; 
+    }
+
+    
+    .navbar a {
+        font-size: 0.9rem; /* Réduction de la taille de police pour que ça tienne */
+        text-align: center;
+        white-space: nowrap; 
+    }
+    
+    /* ⚡ TITRES et TEXTE (Ajusté aux dernières valeurs fournies) */
+    .title h1 { font-size: 3rem; }
+    .title h2 { font-size: 1.2rem; } /* Réajusté à 1.2rem, 1rem était trop petit */
+    #about p { font-size: 1rem; } /* Réajusté à 1rem */
+    #about h2 { font-size: 2rem;}
+    
+    /* ------------------------------------- */
+    /* ⚡ SKILLS (Correction padding des cartes) */
+    /* ------------------------------------- */
+    
+    /* Retiré le .skills { padding-right: 10px; } car le padding est géré par la section #skills */
+     #skills h2 { font-size: 2rem;}
+     /* ⚡ Les cartes n'ont que 2 colonnes pour la lisibilité */
+    .cards-container {
+        gap: 10px;
+    }
+
+   .skills-wrapper {
+        /* 1 colonne de catégorie sur mobile */
+grid-template-columns: 1fr !important;
         gap: 15px;
     }
-    .Skill-category {
-        /* Revert to 100% width on mobile */
-        max-width: none; 
-        padding: 10px;
-    }
-  /* ⚡ Ajustement de la grille pour les catégories de compétences */
-    .cards-container {
-        display: grid;
-        /* ⚡ GEMINI: Utilisation d'auto-fit pour s'assurer que même 2 cartes remplissent bien l'espace */
-        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); 
-        gap: 10px;
-        /* ⚡ GEMINI: Centrage des cartes si elles ne remplissent pas exactement la grille */
-        justify-content: center; 
-    }
-    .Skills-card {
-        /* On ne force plus width: 100% car le minmax gère la taille */
-        width: 100%; 
-        max-width: 160px; /* Limite pour ne pas être trop grande */
-    }
+
+    
     .Skills-card svg {
-        width: 35px; /* Réduction de l'icône */
+        width: 35px; 
     }
     .Skills-card p {
-        font-size: 0.8rem; /* Réduction du texte */
+        font-size: 0.8rem; 
+    }
+    .Skills-card p {
+        font-size: 0.8rem; 
     }
 
-    /* ⚡ Projects (Vertical et Suppression de l'Inversion) */
+    /* ------------------------------------- */
+    /* ⚡ PROJECTS et FOOTER (styles validés) */
+    /* ------------------------------------- */
+    #projects h2 { font-size: 2rem;}
+
     .projects-box {
         grid-template-columns: 1fr;
         gap: 1.5rem;
         padding: 1rem;
         margin-bottom: 1.5rem;
-        /* Suppression de l'inversion des projets sur mobile (image toujours en haut) */
         grid-template-areas: unset; 
     }
     .projects-box.project-even {
-        background: radial-gradient(circle at 90% 90%, rgba(70, 182, 169, 0.134) 0%, transparent 45%); /* Harmonise le background */
+        background: radial-gradient(circle at 90% 90%, rgba(70, 182, 169, 0.134) 0%, transparent 45%); 
     }
     .projects-box.project-even .project-content,
     .projects-box.project-even .project-image {
-        grid-area: unset; /* Annule le grid-area */
+        grid-area: unset; 
     }
     .project-content h3 { font-size: 1.5rem; }
     .project-content p { font-size: 0.9rem; }
     .tech-tag { font-size: 0.8rem; }
     
-    /* ⚡ Contact (Boutons Centrés) */
-    footer {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
     .button-wrapper {
         flex-direction: column;
         gap: 10px;
         width: 100%;
     }
     .linkedin-btn, .github-btn {
-        width: 50%;
+        width: 50%; /* S'étend sur 100% de la colonne */
         max-width: 300px;
     }
 }
