@@ -7,10 +7,11 @@
     <title>Portfolio de Camille LEBIGOT - Développeuse Web</title>
     <link rel="stylesheet" href="https://use.typekit.net/vxt1tqp.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
-
     <header>
         <nav class="navbar">
             <!-- <div class="logo"> A Faire-->
@@ -50,10 +51,10 @@
             </p>
         </section>
 
-        <section id="skills" class="skills-section">
+        <section id="skills" class="skills-section" >
             <h2>Skills</h2>
             <div class="skills-wrapper">
-                <div class="Skill-category font-end">
+                <div class="Skill-category front-end" data-aos="fade-up">
                     <h3>Front-end</h3>
                     <div class="Skills-card">
                         <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -82,7 +83,7 @@
                 </div>
                 <!-- BACK END -->
                 <!-- FRAMEWORK -->
-                <div class="Skill-category frameworks">
+                <div class="Skill-category frameworks" data-aos="fade-up">
                     <h3>Frameworks</h3>
                     <div class="Skills-card">
                         <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -101,7 +102,7 @@
                         <p>React</p>
                     </div>
                 </div>
-                <div class="Skill-category back-end">
+                <div class="Skill-category back-end" data-aos="fade-up">
                     <h3>Back-end</h3>
                     <div class="Skills-card">
                         <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -125,7 +126,7 @@
 
                 </div>
                 <!-- BDD -->
-                <div class="Skill-category frameworks">
+                <div class="Skill-category frameworks" data-aos="fade-up">
                     <h3>Bases de données</h3>
                     <div class="Skills-card">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="currentColor">
@@ -162,12 +163,12 @@
             <div class="projects-wrapper">
 
  <!-- HOME MAKING -->
-                <div class="projects-box">
+                <div class="projects-box" data-aos="fade-right">
                     <div class="project-image">
                         <img src="./a set/projet-fullstack-home-making.png" alt="photo-travelers">
                     </div>
                     <div class="project-content">
-                        <h3>HOME MAKING</h3>
+                        <h3>HOME MAKING - en cours </h3>
                         <p>Conception et développement d'un site web Full-Stack e-commerce spécialisé dans la vente de mobilier d'intérieur haut de gamme.
                         </p>
                         <p>Application Full-Stack développée avec Next.js/ React et Node.js/Express.js.</p>
@@ -192,7 +193,7 @@
                     </div>
                 </div>
 
-                <div class="projects-box">
+                <div class="projects-box" data-aos="fade-right">
                     <div class="project-image">
                         <img src="./a set/projet-waves-in-fullstack.png" alt="photo">
                     </div>
@@ -224,7 +225,7 @@
                 </div>
 
                 <!-- TRAVELERS -->
-                <div class="projects-box">
+                <div class="projects-box" data-aos="fade-right">
                     <div class="project-image">
                         <img src="./a set/projet-fullstack-travelers.png" alt="photo-travelers">
                     </div>
@@ -258,7 +259,7 @@
                     </div>
                 </div>
                 <!-- ADAOPTE -->
-                <div class="projects-box">
+                <div class="projects-box" data-aos="fade-right">
                     <div class="project-image">
                         <img src="./a set/projet-adaopte-fullstack-v2.png" alt="photo">
                     </div>
@@ -288,7 +289,7 @@
                 </div>
 
                 <!-- ADACTION -->
-                <div class="projects-box">
+                <div class="projects-box" data-aos="fade-right">
                     <div class="project-image">
                         <img src="./a set/projet-adaction.png" alt="photo-adaction">
                     </div>
@@ -318,7 +319,7 @@
                 </div>
 
                 <!-- FEMMES ILLUSTRES  -->
-                <div class="projects-box">
+                <div class="projects-box" data-aos="fade-right">
                     <div class="project-image">
                         <img src="./a set/projet_femme-illustre.png" alt="photo">
                     </div>
@@ -346,7 +347,7 @@
                     </div>
                 </div>
 
-                <div class="projects-box">
+                <div class="projects-box" data-aos="fade-right">
                     <div class="project-image">
                         <img src="./a set/projet_quizz.png" alt="photo">
                     </div>
@@ -380,7 +381,7 @@
         <section id="CV">
         </section>
     </main>
-    <footer>
+<footer>
         <section id="contact">
             <h2 id="contact-h2">Contact</h2>
             <div class="button">
@@ -389,8 +390,18 @@
                 <button class="github-btn">Mon GitHub<img src="a set/icons8-github-50.png" alt=""></button>
             </div>
         </section>
-
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 800,   // Vitesse de l'animation (en ms)
+        once: true,      // Joue l'animation une seule fois
+        offset: 120,     // Se déclenche 120px avant l'élément
+      });
+    </script>
+
     <script src="script.js" defer></script>
 </body>
 
