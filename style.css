@@ -270,6 +270,29 @@ h3 {
 /* --------------------- */
 /*       BUTTONS         */
 /* --------------------- */
+/* --------------------- */
+/* VERCEL BUTTON      */
+/* --------------------- */
+.vercel-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #e9345e; /* Même couleur que tes boutons actuels */
+    font-family: 'new-order';
+    color: whitesmoke;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 7px 10px; /* Ajusté pour du texte sans icône image */
+    margin-bottom: 15px;
+}
+
+.vercel-btn:hover {
+    background-color: #37364a; /* Même couleur de hover que LinkedIn/GitHub */
+}
+
 .linkedin-btn,
 .github-btn {
     display: flex;
