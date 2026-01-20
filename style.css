@@ -1,6 +1,9 @@
 /* --------------------- */
 /*        GLOBAL         */
 /* --------------------- */
+*, ::before, ::after {
+    box-sizing: border-box;
+}
 html, body {
     margin: 0;
     padding: 0;
@@ -59,28 +62,18 @@ html, body {
     gap: 2rem;
     font-size: 2rem;
 }
-
 .navbar a {
     color: white;
     text-decoration: none;
     font-size: 1.7rem;
     scroll-behavior: smooth;
 }
-
 .navbar a:hover {
     color: #e24267;
 }
-
-/* Garde ton style spécifique pour le bouton Contact si besoin */
 .navbar .nav-items span {
     color: rgb(70, 182, 169);
 }
-
-/* --------------------- */
-/* HERO LAYOUT     */
-/* --------------------- */
-
-/* Nouveau conteneur pour aligner texte et image en deux colonnes */
 .hero-section {
     display: flex;
     align-items: center;
@@ -90,7 +83,6 @@ html, body {
     gap: 40px;
     padding-top: 5rem;
 }
-
 /* --------------------- */
 /* TITRE / TEXTE   */
 /* --------------------- */
@@ -109,7 +101,6 @@ html, body {
     line-height: 1.1;
     color: whitesmoke;
 }
-
 .title h2 {
     color: whitesmoke;
     font-size: 2.5rem;
@@ -117,7 +108,6 @@ html, body {
     margin-top: 10px;
     margin-bottom: 20px;
 }
-
 .title p {
     color: #8a95ae;
     font-size: 1.2rem;
@@ -125,7 +115,6 @@ html, body {
     max-width: 500px;
     margin: 0;
 }
-
 /* --------------------- */
 /* HERO IMAGE      */
 /* --------------------- */
@@ -151,13 +140,9 @@ html, body {
     display: block;
     transition: 0.3s ease;
 }
-
-/* Ton effet d'opacité existant */
 .img-wrapper:hover img {
     opacity: 60%;
 }
-
-/* Stylisation du texte "Mon LinkedIn" */
 .hover-text {
     position: absolute;
     top: 50%;
@@ -171,8 +156,6 @@ html, body {
     transition: 0.3s ease;
     pointer-events: none; /* Le clic passe à travers pour atteindre le lien */
 }
-
-/* Affichage du texte au survol */
 .img-wrapper:hover .hover-text {
     opacity: 1;
 }
@@ -195,29 +178,15 @@ html, body {
     padding: 5px 15px; /* Ajusté pour être plus équilibré */
     margin-bottom: 15px;
 }
-
 .github-btn-one img {
     margin-left: 10px;
     height: 35px;
     width: 35px;
     object-fit: contain;
 }
-
 .github-btn-one:hover {
     background-color: #2d2e42;
 }
-
-/* --------------------- */
-/*       MAIN            */
-/* --------------------- */
-main {
-    margin: 0;
-    font-family: "Nunito";
-    /* justify-content: center; */
-    /* padding-left: 10rem;
-    padding-right: 10rem; */
-}
-
 /* Titres */
 h2,
 h3 {
@@ -226,7 +195,6 @@ h3 {
     font-style: normal;
     font-weight: 600;
 }
-
 /* --------------------- */
 /*        ABOUT          */
 /* --------------------- */
@@ -260,11 +228,11 @@ padding-bottom: 1.2rem;
 /*        SKILLS         */
 /* --------------------- */
 #skills {
-    padding-top: 10rem;
+    padding-top: 7rem;
     padding-left: 10rem;
     padding-right: 10rem;
     font-family: "new-order";
-    padding-bottom: 10rem;
+    padding-bottom: 7rem;
     justify-content: center;
 }
 #skills h3 {
@@ -281,7 +249,6 @@ padding-bottom: 1.2rem;
     margin: 0;
     padding-bottom: 2rem;
 }
-
 .Skill-category {
     background-color: #34354cfc;
     min-height: 230px; 
@@ -347,8 +314,6 @@ padding-bottom: 1.2rem;
 .Skills-card:hover .icon-agile {
     transform: scale(1.15) rotate(10deg); /* Garde la même animation que tes SVGs */
 }
-
-
 /* --------------------- */
 /* TECHNOS PROJETS       */
 /* --------------------- */
@@ -357,6 +322,7 @@ padding-bottom: 1.2rem;
     flex-wrap: wrap;
     gap: 8px;
     margin-top: 10px;
+    padding-bottom: 10px;
 }
 .tech-tag {
     padding: 6px 12px;
@@ -367,7 +333,6 @@ padding-bottom: 1.2rem;
     background-color: rgba(220, 212, 212, 0.608);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-
 /* couleurs spécifiques par techno */
 .html { background-color: #e14468; color: white; }
 .css { background-color: #61627ad1; color: rgb(66, 218, 200); }
@@ -384,29 +349,38 @@ padding-bottom: 1.2rem;
 #projects {
     font-family: "new-order";
     background-color: #2d2e42;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
 }
-
+#projects h1 {
+    font-family: "new-order";
+    color: whitesmoke;
+    font-size: 3rem;
+    margin-left: 10rem; /* ⚡ On utilise margin au lieu de padding */
+    border-bottom: 5px solid #e9345e;
+    width: 50px; /* Le trait fera 50px à partir du début du texte */
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 2rem;
+    padding-left: 0; /* On remet le padding à 0 */
+}
 #projects h2 {
 padding-left: 10rem;
 padding-right: 10rem;
 }
-
+/* ::::::::: */
 .projects-box {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    border-radius: 8px;
     gap: 2rem;
     align-items: center;
-    background: radial-gradient(circle at 90% 90%, rgba(70, 182, 169, 0.134) 0%, transparent 45%);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    background-color: #34354c;
+    /* background: radial-gradient(circle at 90% 90%, rgba(70, 182, 169, 0.134) 0%, transparent 45%); */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);  
     margin-bottom: 2rem;
     margin-left: 10rem;
     margin-right: 10rem;
-}
-.project-wrapper {
-    
-    padding-bottom: 50px;
 }
 .project-image img {
     width: 100%;
@@ -415,7 +389,6 @@ padding-right: 10rem;
     border-radius: 8px;
 }
 .project-content h3 {
-    
     margin-bottom: 1rem;
     font-size: 1.4rem;
 }
@@ -497,7 +470,7 @@ footer {
     background-color: #2d2e42;
     padding-left: 10rem;
     padding-right: 10rem;
-    padding-top: 25px;
+    /* padding-top: 25px; */
     padding-bottom: 25px;
 }
 
@@ -533,166 +506,94 @@ a {
 }
 
 /* --------------------- */
-/*       MEDIA QUERIES   */
-/* --------------------- */
-
-/* --------------------- */
 /* Desktop à Tablette     */
 /* --------------------- */
 @media (max-width: 1024px) {
-        body {
-        /* background-size: 60% 60%, 60% 60%; /* agrandit les cercles verts */
-        /* background-position: top 5% left 5%, bottom 5% right 5%; décale légèrement pour éviter bord */ 
+    /* ⚡ INTERVENTION : Ajustement des marges pour le nouveau layout Hero et About */
+    .title, footer, .hero-section, #about h2, #projects h2, .projects-box {
+        padding-left: 5rem !important;
+        padding-right: 5rem !important;
     }
-    .title,
-    main,
-    footer {
-        padding-left: 5rem;
-        padding-right: 5rem;
+    /* ⚡ INTERVENTION : Ajustement de l'encadré rouge d'alternance pour tablette */
+    div[style*="border: 1px solid #e9345e"] {
+        margin-left: 5rem !important;
+        width: calc(100% - 10rem) !important;
+    }
+    /* ⚡ INTERVENTION : Grille de compétences en 2 colonnes pour tablette */
+    .skills-wrapper {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
-/* ===================== */
- /* --------------------- */
+
+/* --------------------- */
 /* Mobile (<= 600px)     */
 /* --------------------- */
 @media (max-width: 600px) {
-    
-    /* ⚡ STEP 1: RETRAIT DU PADDING DES CONTENEURS PARENTS (pour éviter les conflits de largeur) */
-    .title, main, footer {
-        /* Ces conteneurs sont mis en pleine largeur (0 padding) */
-        padding-left: 0; 
-        padding-right: 0;
+    /* ⚡ BASE : Bloque tout dépassement latéral */
+    html, body {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden;
     }
-    
-    /* ⚡ STEP 2: APPLICATION DU PADDING SUR LES SECTIONS ENFANTS (pour l'espace de 1rem) */
-    /* Les styles suivants assurent que le contenu interne est aligné et n'est pas collé aux bords */
-    #about, #skills, #projects, #contact, .navbar, .title {
-        /* Ajuste le padding horizontal pour toutes les sections principales */
-        padding-left: 1rem !important; 
-        padding-right: 2rem !important;
+    /* ⚡ ALIGNEMENT HARMONISÉ : Marges identiques partout */
+    .hero-section, #about, #skills, #projects, #contact, footer {
+        padding-left: 1.5rem !important; 
+        padding-right: 1.5rem !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        box-sizing: border-box !important;
     }
-
-    /* ⚡ COMPENSE LE CONTENU CACHÉ PAR LA BARRE INFÉRIEURE (60px de haut) */
-    main, footer {
-        padding-bottom: 80px; 
-    }
-    
-    /* ⚡ Le titre remonte car la nav n'est plus en haut */
-    .title {
-        /* On conserve le padding-top de 30px */
-        padding-top: 30px; 
-        /* Réduire le padding-bottom du titre pour laisser plus d'espace */
-        padding-bottom: 30px; 
-    }
-    
-    /* ------------------------------------- */
-    /* ⚡ NAVIGATION INFÉRIEURE (Bottom Nav) */
-    /* ------------------------------------- */
-    
-.navbar {
-    top: auto; 
-    bottom: 0; 
-    position: fixed; 
-    width: 100%;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-
-    /* ⚡ CORRECTION CLÉ: Supprimer tout padding horizontal ici */
-    padding: 0; 
-    height: 60px; 
-    
-    /* On utilise space-between pour pousser les nav-items aux extrémités */
-    justify-content: space-between; 
-    align-items: center; 
-}
-
-.navbar .nav-items {
-    /* ⚡ CLÉ DU SUCCÈS: Ajouter le padding interne ici, pour qu'il ne soit pas coupé */
-    padding-left: 1rem;
-    padding-right: 3rem;
-    
-    width: 100%;
-    /* Utiliser space-between pour étaler les liens aux extrémités du padding interne */
-    justify-content: space-between; 
-    gap: 0.2rem; 
-    margin-top: 0;
-}
-    
-    .logo {
-        display: none !important; 
-    }
-
-    
-    .navbar a {
-        font-size: 0.9rem; /* Réduction de la taille de police pour que ça tienne */
+    /* ⚡ HERO : Image LinkedIn au-dessus du texte */
+    .hero-section {
+        flex-direction: column-reverse; 
+        padding-top: 4rem !important;
         text-align: center;
-        white-space: nowrap; 
+        gap: 20px;
     }
-    
-    /* ⚡ TITRES et TEXTE (Ajusté aux dernières valeurs fournies) */
-    .title h1 { font-size: 3rem; }
-    .title h2 { font-size: 1.2rem; } /* Réajusté à 1.2rem, 1rem était trop petit */
-    #about p { font-size: 0.8rem; } /* Réajusté à 1rem */
-    #about h2 { font-size: 2rem;}
-    
-    /* ------------------------------------- */
-    /* ⚡ SKILLS (Correction padding des cartes) */
-    /* ------------------------------------- */
-    
-    /* Retiré le .skills { padding-right: 10px; } car le padding est géré par la section #skills */
-     #skills h2 { font-size: 2rem;}
-     /* ⚡ Les cartes n'ont que 2 colonnes pour la lisibilité */
-    .cards-container {
-        gap: 10px;
+    .title { padding: 20px 0 !important; }
+    .title h1 { font-size: 2.2rem; }
+    .title h2 { font-size: 1.2rem; }
+    .img-wrapper { max-width: 250px; margin: 0 auto; }
+    /* ⚡ SECTION ABOUT : Suppression des décalages desktop */
+    #about h2 { padding: 20px 0 !important; text-align: left; font-size: 2rem; }
+    #about p {
+        width: 100% !important; padding-left: 0 !important; padding-right: 0 !important;
+        margin: 0 0 1.2rem 0 !important; text-align: left; line-height: 1.5; font-size: 1rem;
     }
-.skills-wrapper {
-
-grid-template-columns: 1fr;
-padding-left: 10px;
-
-gap: 15px;
-
-/* Force le centrage de la grille dans sa section (qui a 1rem de padding) */
-
-justify-items: center;
-
-}
-    .Skills-card svg {
-        width: 35px; 
+    /* ⚡ ENCADRÉ ROUGE : Aligné sur les 1.5rem de la section */
+    div[style*="border: 1px solid #e9345e"] { margin: 20px 0 !important; width: 100% !important; }
+    div[style*="border: 1px solid #e9345e"] p { padding: 15px !important; font-size: 0.9rem !important; width: 100% !important; }
+    /* ⚡ SKILLS : Grille verticale harmonisée */
+    #skills h2 { font-size: 2rem; padding: 20px 0 !important; }
+    .skills-wrapper { display: flex !important; flex-direction: column !important; gap: 25px !important; padding: 0 !important; }
+    .Skill-category {
+        width: 100% !important; min-height: auto !important; display: flex !important;
+        flex-direction: column !important; align-items: center !important;
+        padding: 15px !important; background-color: #34354cfc !important;
     }
-    .Skills-card p {
-        font-size: 0.8rem; 
+    .Skills-card {
+        width: 100% !important; height: auto !important; margin-bottom: 10px !important;
+        padding: 10px 0 !important; background-color: #3d3e56 !important;
+        display: flex !important; flex-direction: column !important; align-items: center !important;
     }
-    .Skills-card p {
-        font-size: 0.8rem; 
+    .Skills-card svg, .icon-agile { width: 45px !important; height: 45px !important; margin-bottom: 5px !important; }
+    /* ⚡ PROJECTS : Correction du décalage titre Portfolio */
+    #projects h1 {
+        padding-left: 0 !important; margin-left: 0 !important; text-align: left; font-size: 2.2rem;
+        width: fit-content; border-bottom: 4px solid #e9345e; padding-bottom: 0.5rem; margin-bottom: 1.5rem !important;
     }
-
-    /* ------------------------------------- */
-    /* ⚡ PROJECTS et FOOTER (styles validés) */
-    /* ------------------------------------- */
-    #projects h2 { font-size: 2rem;}
-#projects{
-    padding: auto;
-}
-    .projects-box {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        padding: 1rem;
-        margin-bottom: 1.5rem;
-        grid-template-areas: unset; 
-    }
-    .projects-box.project-even {
-        background: radial-gradient(circle at 90% 90%, rgba(70, 182, 169, 0.134) 0%, transparent 45%); 
-    }
-    .projects-box.project-even .project-content,
-    .projects-box.project-even .project-image {
-        grid-area: unset; 
-    }
-    .project-content h3 { font-size: 1.5rem; }
+    #projects h2 { font-size: 2rem; padding: 20px 0 !important; }
+    .projects-box { grid-template-columns: 1fr; gap: 1.5rem; padding: 1rem !important; margin: 0 0 2rem 0 !important; border-radius: 8px; }
+    .project-content h3 { font-size: 1.3rem; }
     .project-content p { font-size: 0.9rem; }
-    .tech-tag { font-size: 0.8rem; }
-    
+    /* ⚡ CONTACT : Correction du chevauchement texte/email */
+    #contact { display: flex !important; flex-direction: column !important; align-items: flex-start !important;}
+    #contact p { margin-bottom: 0 !important; }
+    #contact a[href^="mailto:"] { word-break: break-all; font-size: 1rem !important; }
+    /* ⚡ FOOTER & BOUTONS : Largeur ajustée */
     .button-wrapper {
         flex-direction: column;
         gap: 10px;
@@ -702,4 +603,18 @@ justify-items: center;
         width: 50%; /* S'étend sur 100% de la colonne */
         max-width: 300px;
     }
+   /* Ciblage de l'image GitHub pour l'aligner sur LinkedIn */
+.github-btn img {
+    width: 40px !important;      /* Taille identique à LinkedIn */
+    height: 40px !important;
+    border-radius: 50% !important; /* Crée le cercle blanc */
+    padding: 4px !important;  
+    margin-right: 2px;    /* Espace pour que l'icône ne touche pas les bords */
+    object-fit: contain !important;
+}
+    .navbar { top: auto; bottom: 0; position: fixed; width: 100%; left: 0; height: 65px; padding: 0 1rem !important; justify-content: center; }
+    .navbar .nav-items { width: 100%; justify-content: space-around; gap: 0; }
+    .nav-logo { display: none !important; }
+    .navbar a { font-size: 0.95rem; white-space: nowrap; }
+    footer { padding-bottom: 95px !important; }
 }
