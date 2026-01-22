@@ -322,7 +322,7 @@ padding-bottom: 1.2rem;
     flex-wrap: wrap;
     gap: 8px;
     margin-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 25px;
 }
 .tech-tag {
     padding: 6px 12px;
@@ -430,6 +430,8 @@ padding-right: 10rem;
     display: flex;
     flex-direction: row;
     align-items: center;
+    /* On utilise justify-content pour caler le texte à gauche et l'icône à droite */
+    justify-content: space-between; 
     background-color: #e9345e;
     font-family: 'new-order';
     color: whitesmoke;
@@ -438,26 +440,32 @@ padding-right: 10rem;
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    padding-left: 7px;
+    /* On fixe un padding vertical (8px) et horizontal (15px) identique pour les deux */
     margin-bottom: 15px;
+    /* Largeur fixe pour qu'ils aient la même taille visuelle */
+    width: 170px; 
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 10px;
 }
-.linkedin-btn img {
-    margin-left: 10px;
-    padding-left: 5px;
-    height: 40px;
+/* On unifie la taille des deux images à 40px */
+.linkedin-btn img{
+    height: 40px; 
     width: 40px;
     object-fit: contain;
-    margin: auto;
+    /* On supprime les marges et paddings individuels qui créaient le décalage */
+    margin: 0;
+    padding: 0;
 }
 .github-btn img {
     margin-left: 10px;
-    height: 50px;
-    width: 50px;
+    height: 35px;
+    width: 35px;
     object-fit: contain;
-    padding-left: 15px;
-    padding-right: 5px;
-    margin: auto;
+    /* On supprime les marges et paddings individuels qui créaient le décalage */
 }
+
 .linkedin-btn:hover,
 .github-btn:hover {
     background-color: #37364a;
