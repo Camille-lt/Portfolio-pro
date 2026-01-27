@@ -83,6 +83,9 @@ html, body {
     gap: 40px;
     padding-top: 5rem;
 }
+.nav-items a.active {
+    color:#e24267 !important; /* Force la couleur rouge */
+}
 /* --------------------- */
 /* TITRE / TEXTE   */
 /* --------------------- */
