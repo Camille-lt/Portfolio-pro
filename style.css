@@ -401,6 +401,53 @@ padding-right: 10rem;
     margin-bottom: 0.7rem;
     line-height: 1.5;
 }
+/* Le conteneur du lien : il doit épouser la taille de l'image */
+.project-img-container {
+    position: relative;
+    display: inline-block; /* Très important pour ne pas prendre toute la largeur */
+    line-height: 0;        /* Supprime l'espace vide sous l'image */
+    width: 100%;           /* S'adapte à ton div project-image */
+}
+
+/* L'image reste naturelle */
+.project-img-container img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+/* L'overlay qui contient le texte */
+.project-hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Voile noir léger */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Caché par défaut */
+    transition: opacity 0.3s ease;
+}
+
+/* Le texte à l'intérieur de l'overlay */
+.project-hover-overlay span {
+    color: #e9345e; /* Ta couleur turquoise */
+    font-family: 'new-order', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+/* Au survol : on affiche l'overlay et on baisse l'opacité de l'image */
+.project-img-container:hover .project-hover-overlay {
+    opacity: 2;
+}
+
+.project-img-container:hover img {
+    opacity: 0.6;
+}
 
 /* --------------------- */
 /*       BUTTONS         */
