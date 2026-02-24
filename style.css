@@ -111,12 +111,17 @@ html, body {
     margin-top: 10px;
     margin-bottom: 20px;
 }
+
 .title p {
     color: #8a95ae;
     font-size: 1.2rem;
     line-height: 1.5;
     max-width: 500px;
     margin: 0;
+}
+
+.title h2 span {
+    color: #e24267;
 }
 /* --------------------- */
 /* HERO IMAGE      */
@@ -203,28 +208,39 @@ h3 {
 /* --------------------- */
 #about {
     background-color: #2d2e42;
-    padding-top: 7rem;
+    padding-top: 4rem;
     padding-bottom: 7rem;
     width: 100%;
     font-family: "new-order";
+    /* IMPORTANT : Utilise la même marge que ton header ici */
+    padding-left: 10rem; 
+    padding-right: 10rem;
+    box-sizing: border-box;
 }
-
 #about h2 {
-    padding-left: 10rem;
     margin: 0;
-    font-size: 2.5rem;
-    padding-bottom: 25px;
-    padding-top: 25px;
+    font-size: 3rem;
+    color: #e9345e;
+    padding-bottom: 2rem;
+    text-align: left; /* Aligné à gauche */
 }
-
 #about p {
-    width: 600px;  
+    max-width: 800px; /* On limite la largeur pour la lecture, mais on reste à gauche */
     color: whitesmoke;
-    margin: 0;
-padding-left: 10rem;
+    margin: 0 0 1.2rem 0; /* Pas de "auto" ici pour ne pas centrer le bloc */
     font-size: 1.2rem;
-padding-bottom: 1.2rem;
     line-height: 1.5;
+    text-align: left;
+}
+.alternance-box {
+    border: 1px solid #e9345e;
+    border-radius: 10px;
+    max-width: 650px;
+    margin-top: 2rem;
+}
+.alternance-box p {
+    padding: 20px !important;
+    text-align: left;
 }
 
 /* --------------------- */
