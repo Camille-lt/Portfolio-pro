@@ -353,14 +353,19 @@ h3 {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 /* couleurs spécifiques par techno */
+.python { background-color: #3776ab; color: white; }
+.fastapi { background-color: #05998b; color: white; }
 .html { background-color: #e14468; color: white; }
 .css { background-color: #61627ad1; color: rgb(66, 218, 200); }
 .js { background-color: #fcd00cde; color: #2e304a; }
 .react { background-color: rgb(66, 218, 200); color: #2d2e42; }
 .next { background-color: #4d5278ca; color: rgb(66, 218, 200); }
 .node { background-color: #59ab90; color: white; }
+.postgres { background-color: #336791; color: white; }
 .express { background-color: #a83f58; color: white; }
+.tailwind { background-color: #38bdf8; color: #0f172a; }
 .sql { background-color: #4b8196ee; color: white; }
+.ai { background-color: #ff6b00; color: white; font-weight: bold; }
 
 /* --------------------- */
 /*       PROJECTS        */
