@@ -422,6 +422,10 @@ padding-right: 10rem;
     margin-bottom: 0.7rem;
     line-height: 1.5;
 }
+/* .project-content a {
+    color: #e24267;
+} */
+ 
 /* Le conteneur du lien : il doit épouser la taille de l'image */
 .project-img-container {
     position: relative;
@@ -429,14 +433,12 @@ padding-right: 10rem;
     line-height: 0;        /* Supprime l'espace vide sous l'image */
     width: 100%;           /* S'adapte à ton div project-image */
 }
-
 /* L'image reste naturelle */
 .project-img-container img {
     width: 100%;
     height: auto;
     transition: opacity 0.3s ease;
 }
-
 /* L'overlay qui contient le texte */
 .project-hover-overlay {
     position: absolute;
@@ -451,7 +453,6 @@ padding-right: 10rem;
     opacity: 0; /* Caché par défaut */
     transition: opacity 0.3s ease;
 }
-
 /* Le texte à l'intérieur de l'overlay */
 .project-hover-overlay span {
     color: #e9345e; /* Ta couleur turquoise */
@@ -489,11 +490,19 @@ padding-right: 10rem;
     cursor: pointer;
     transition: background-color #2d2e42 0.3s ease;
     padding: 7px 10px; /* Ajusté pour du texte sans icône image */
-    margin-bottom: 15px;
 }
 
 .vercel-btn:hover {
     background-color: #2d2e42; /* Même couleur de hover que LinkedIn/GitHub */
+}
+.github-link {
+    color : #e9345e;
+    border: solid 1px #e9345e;
+}
+.github-link:hover {
+    color : white;
+        border: solid 1px white;
+
 }
 
 .linkedin-btn,
